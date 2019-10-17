@@ -50,6 +50,8 @@
                 Grid.Column="5" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"/>
         <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="Black" 
                 Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"/>
+        <Button Height ="50" Width="50" BorderThickness="2" BorderBrush="Black" 
+                HorizontalAlignment="Center"/>
     </Grid>
 </Page>
  
