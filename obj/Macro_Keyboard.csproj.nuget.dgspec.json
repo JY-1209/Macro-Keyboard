@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj": {}
+    "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj": {
+    "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj",
+        "projectUniqueName": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj",
         "projectName": "Macro_Keyboard",
-        "projectPath": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj",
+        "projectPath": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj",
         "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\obj\\",
+        "outputPath": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

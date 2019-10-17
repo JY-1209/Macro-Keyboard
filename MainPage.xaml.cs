@@ -30,9 +30,9 @@ namespace Macro_Keyboard
         public MainPage()
         {
             this.InitializeComponent();
-            APODListBoxItem.IsSelected = true;
+            ListBoxItem.IsSelected = true;
             InnerFrame.Navigate(typeof(HomePage));
-            IconsListBox.SelectedItem = APODListBoxItem;
+            IconsListBox.SelectedItem = ListBoxItem;
         }
 
         private void Hamburger_Click(object sender, RoutedEventArgs e)

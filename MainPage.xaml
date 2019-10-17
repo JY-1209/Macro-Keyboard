@@ -27,7 +27,7 @@
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged" >
 
-                    <ListBoxItem Name="APODListBoxItem" FontFamily="calibri">
+                    <ListBoxItem Name="ListBoxItem" FontFamily="calibri">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE786;" />
                             <TextBlock Text="HomePage" FontFamily="Calibri" FontSize="24" Margin="20,0,0,0" />
