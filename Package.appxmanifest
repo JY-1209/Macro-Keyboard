@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="3d8e46d3-f784-4f70-b153-49c856fb3dbb"
+    Name="bb2ebec5-2d79-4f60-8172-a310f1737348"
     Publisher="CN=justi"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="3d8e46d3-f784-4f70-b153-49c856fb3dbb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="bb2ebec5-2d79-4f60-8172-a310f1737348" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>MacroKeyboard</DisplayName>
+    <DisplayName>Macro_Keyboard</DisplayName>
     <PublisherDisplayName>justi</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="MacroKeyboard.App">
+      EntryPoint="Macro_Keyboard.App">
       <uap:VisualElements
-        DisplayName="MacroKeyboard"
+        DisplayName="Macro_Keyboard"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="MacroKeyboard"
+        Description="Macro_Keyboard"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

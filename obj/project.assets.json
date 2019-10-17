@@ -8157,11 +8157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\justi\\source\\repos\\MacroKeyboard\\MacroKeyboard.csproj",
-      "projectName": "MacroKeyboard",
-      "projectPath": "C:\\Users\\justi\\source\\repos\\MacroKeyboard\\MacroKeyboard.csproj",
+      "projectUniqueName": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj",
+      "projectName": "Macro_Keyboard",
+      "projectPath": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\Macro_Keyboard.csproj",
       "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\justi\\source\\repos\\MacroKeyboard\\obj\\",
+      "outputPath": "C:\\Users\\justi\\source\\repos\\Macro_Keyboard\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
