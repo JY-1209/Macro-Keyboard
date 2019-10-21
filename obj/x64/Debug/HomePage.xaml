@@ -43,7 +43,7 @@
     </TextBlock>    -->
 
     <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock
+        <TextBlock x:ConnectionId='2'
                 Name="MyRectangle"
                 Text="Welcome to&#x0a;Macro Keyboard&#x0a;Software"
                 FontFamily="verdana" FontSize="150">
@@ -65,3 +65,4 @@
     </StackPanel>
 </Page>
  
+

@@ -96,3 +96,13 @@ C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\qualifiers.txt.inte
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885562160000000.json
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Saved.g.i.cs
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Saved.g.cs
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Saved.xaml
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Saved.xbf
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Saved.xbf
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Settings.xbf
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Settings.g.i.cs
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Settings.g.cs
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Settings.xaml
+C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Settings.xbf

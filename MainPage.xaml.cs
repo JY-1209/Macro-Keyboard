@@ -30,9 +30,9 @@ namespace Macro_Keyboard
         public MainPage()
         {
             this.InitializeComponent();
-            ListBoxItem.IsSelected = true;
+            HomePageListBoxItem.IsSelected = true;
             InnerFrame.Navigate(typeof(HomePage));
-            IconsListBox.SelectedItem = ListBoxItem;
+            IconsListBox.SelectedItem = HomePageListBoxItem;
         }
 
         private void Hamburger_Click(object sender, RoutedEventArgs e)
@@ -40,16 +40,65 @@ namespace Macro_Keyboard
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
-        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            if (HomePageListBoxItem.IsSelected)
+            {
+                InnerFrame.Navigate(typeof(HomePage));
+                Header.Text = "HomePage";
+            }
+            
+            else if (SettingsListBoxItem.IsSelected) {
+                InnerFrame.Navigate(typeof(Settings));
+                Header.Text = "Settings";
+            }
 
+            else if (SavedListBoxItem.IsSelected) {
+                InnerFrame.Navigate(typeof(Saved));
+                Header.Text = "Saved";
+            }
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void BackButton_Click(object sender, RoutedEventArgs e) {
+            if (InnerFrame.CanGoBack) 
+            {
 
+                //if (InnerFrame.BackStack.Last().GetType() == typeof(HomePage))
+                //{
+                //    Header.Text = "HomePage";
+                //    IconsListBox.SelectedItem = HomePageListBoxItem;
+                //}
+
+                //if (InnerFrame.BackStack.Last().GetType() == typeof(Settings))
+                //{
+                //    Header.Text = "Settings";
+                //    IconsListBox.SelectedItem = SettingsListBoxItem;
+                //}
+
+                //if (InnerFrame.BackStack.Last().GetType() == typeof(Saved))
+                //{
+                //    Header.Text = "Saved";
+                //    IconsListBox.SelectedItem = SavedListBoxItem;
+                //}
+
+                InnerFrame.GoBack();
+                if (InnerFrame.Content.GetType() == typeof(HomePage))
+                {
+                    Header.Text = "HomePage";
+                    IconsListBox.SelectedItem = HomePageListBoxItem;
+                }
+
+                else if (InnerFrame.Content.GetType() == typeof(Settings))
+                {
+                    Header.Text = "Settings";
+                    IconsListBox.SelectedItem = SettingsListBoxItem;
+                }
+
+                else if (InnerFrame.Content.GetType() == typeof(Saved))
+                {
+                    Header.Text = "Saved";
+                    IconsListBox.SelectedItem = SavedListBoxItem;
+                }
+            }
         }
-
-
     }
 }
