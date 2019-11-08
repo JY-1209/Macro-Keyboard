@@ -33,6 +33,7 @@ namespace Macro_Keyboard
             HomePageListBoxItem.IsSelected = true;
             InnerFrame.Navigate(typeof(HomePage));
             IconsListBox.SelectedItem = HomePageListBoxItem;
+            BackButton.IsEnabled = false;
         }
 
         private void Hamburger_Click(object sender, RoutedEventArgs e)
@@ -53,51 +54,47 @@ namespace Macro_Keyboard
             }
 
             else if (SavedListBoxItem.IsSelected) {
-                InnerFrame.Navigate(typeof(Saved));
+                InnerFrame.Navigate(typeof(SavedPreferences));
                 Header.Text = "Saved";
             }
+            BackButton.IsEnabled = true;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e) {
             if (InnerFrame.CanGoBack) 
             {
-
-                //if (InnerFrame.BackStack.Last().GetType() == typeof(HomePage))
-                //{
-                //    Header.Text = "HomePage";
-                //    IconsListBox.SelectedItem = HomePageListBoxItem;
-                //}
-
-                //if (InnerFrame.BackStack.Last().GetType() == typeof(Settings))
-                //{
-                //    Header.Text = "Settings";
-                //    IconsListBox.SelectedItem = SettingsListBoxItem;
-                //}
-
-                //if (InnerFrame.BackStack.Last().GetType() == typeof(Saved))
-                //{
-                //    Header.Text = "Saved";
-                //    IconsListBox.SelectedItem = SavedListBoxItem;
-                //}
-
                 InnerFrame.GoBack();
                 if (InnerFrame.Content.GetType() == typeof(HomePage))
                 {
                     Header.Text = "HomePage";
                     IconsListBox.SelectedItem = HomePageListBoxItem;
+                    if(InnerFrame.BackStack.Count > 0)
+                    {
+                        InnerFrame.GoBack();
+                    }
                 }
 
                 else if (InnerFrame.Content.GetType() == typeof(Settings))
                 {
                     Header.Text = "Settings";
                     IconsListBox.SelectedItem = SettingsListBoxItem;
+                    if (InnerFrame.BackStack.Count > 0)
+                    {
+                        InnerFrame.GoBack();
+                    }
                 }
 
-                else if (InnerFrame.Content.GetType() == typeof(Saved))
+                else if (InnerFrame.Content.GetType() == typeof(SavedPreferences))
                 {
                     Header.Text = "Saved";
                     IconsListBox.SelectedItem = SavedListBoxItem;
+                    if (InnerFrame.BackStack.Count > 0)
+                    {
+                        InnerFrame.GoBack();
+                    }
                 }
+
+                BackButton.IsEnabled = InnerFrame.CanGoBack;
             }
         }
     }

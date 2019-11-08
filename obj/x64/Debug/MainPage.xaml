@@ -33,22 +33,25 @@
 
                     <ListBoxItem x:ConnectionId='4' Name="HomePageListBoxItem" FontFamily="Verdana">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" />
-                            <TextBlock Text="HomePage" FontFamily="Verdana" FontSize="24" Margin="20,0,0,0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" 
+                                       Margin="6,0,0,0"/>
+                            <TextBlock Text="HomePage" FontFamily="Verdana" FontSize="24" Margin="40,0,0,0" />
                         </StackPanel>
                     </ListBoxItem>
                     
                     <ListBoxItem x:ConnectionId='5' Name="SettingsListBoxItem" FontFamily="Verdana">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE713;" />
-                            <TextBlock Text="Settings" FontFamily="Verdana" FontSize="24" Margin="20,0,0,0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE713;"
+                                       Margin="6,0,0,0"/>
+                            <TextBlock Text="Settings" FontFamily="Verdana" FontSize="24" Margin="40,0,0,0" />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:ConnectionId='6' Name="SavedListBoxItem" FontFamily="Verdana">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" />
-                            <TextBlock Text="Saved" FontSize="24" Margin="20,0,0,0" FontFamily="Verdana" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" 
+                                       Margin="6,0,0,0"/>
+                            <TextBlock Text="Saved" FontSize="24" Margin="40,0,0,0" FontFamily="Verdana" />
                         </StackPanel>
                     </ListBoxItem>
 

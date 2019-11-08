@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>YOONSY_DESKTOP</Machine>
-    <WindowsUser>justi</WindowsUser>
+    <Machine>51S500035878</Machine>
+    <WindowsUser>s-yangju</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>bb2ebec5-2d79-4f60-8172-a310f1737348</PackageIdentityName>
     <PackageIdentityPublisher>CN=justi</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D8421F10DE894B5B1DAD13ECDCAB656C4691713640F5EA33CE9D1B70A068C345</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>875A41681C29C1A97E66692087B85031D16888786D843838014A94F694ADCB0E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>bb2ebec5-2d79-4f60-8172-a310f1737348_1.0.0.0_x64__eeb1y6kfp8qqa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>bb2ebec5-2d79-4f60-8172-a310f1737348_eeb1y6kfp8qqa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>bb2ebec5-2d79-4f60-8172-a310f1737348</RegisteredPackageID>
@@ -27,98 +27,102 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T08:13:21.319</Modified>
+      <Modified>2019-11-07T22:16:46.288</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.exe">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.exe">
       <PackagePath>entrypoint\Macro_Keyboard.exe</PackagePath>
-      <Modified>2019-10-21T08:13:20.584</Modified>
+      <Modified>2019-11-07T22:16:41.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2019-07-22T21:01:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2019-03-19T01:36:56.000</Modified>
+      <Modified>2018-10-23T08:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\Image.jfif">
+      <PackagePath>Assets\Image.jfif</PackagePath>
+      <Modified>2019-11-01T21:31:47.948</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-10-21T06:23:22.889</Modified>
+      <Modified>2019-10-21T08:15:40.725</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-10-21T06:23:22.868</Modified>
+      <Modified>2019-10-21T08:15:40.694</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.869</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.871</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.872</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.873</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.874</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-21T06:23:22.875</Modified>
+      <Modified>2019-10-21T08:15:40.709</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.xr.xml">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.xr.xml">
       <PackagePath>Macro_Keyboard.xr.xml</PackagePath>
-      <Modified>2019-10-21T08:13:20.196</Modified>
+      <Modified>2019-11-07T22:11:42.435</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-10-21T08:13:20.217</Modified>
+      <Modified>2019-11-07T22:16:41.310</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
-      <Modified>2019-10-21T08:13:20.217</Modified>
+      <Modified>2019-11-07T22:16:41.310</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-10-21T08:13:20.218</Modified>
+      <Modified>2019-11-07T22:16:41.326</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Saved.xbf">
-      <PackagePath>Saved.xbf</PackagePath>
-      <Modified>2019-10-21T08:13:20.218</Modified>
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SavedPreferences.xbf">
+      <PackagePath>SavedPreferences.xbf</PackagePath>
+      <Modified>2019-11-07T22:16:41.327</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Settings.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Settings.xbf">
       <PackagePath>Settings.xbf</PackagePath>
-      <Modified>2019-10-21T08:13:20.219</Modified>
+      <Modified>2019-11-07T22:16:41.327</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2019-03-19T00:33:42.000</Modified>
+      <Modified>2018-10-23T07:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-10-21T07:30:06.427</Modified>
+      <Modified>2019-11-07T22:16:44.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\Macro_Keyboard.exe">
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\Macro_Keyboard.exe">
       <PackagePath>Macro_Keyboard.exe</PackagePath>
-      <Modified>2019-10-21T08:13:21.311</Modified>
+      <Modified>2019-11-07T22:16:46.244</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
