@@ -8,60 +8,44 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--<Rectangle x:Name="rect1" RenderTransformOrigin="0.5, 0.5" Height="200" Width="200"
-               Fill="black">
-        <Rectangle.RenderTransform>
-            --><!-- giving the transform a name tells the framework not to freeze it --><!--
-            <RotateTransform x:Name="noFreeze" />
-        </Rectangle.RenderTransform>
-        <Rectangle.Triggers>
-            <EventTrigger RoutedEvent="Loaded">
-                <BeginStoryboard>
-                    <Storyboard>
-                        <DoubleAnimation
-            Storyboard.TargetProperty="(Rectangle.RenderTransform).(RotateTransform.Angle)"
-            To="-360" Duration="0:0:1" RepeatBehavior="Forever" />
-                    </Storyboard>
-                </BeginStoryboard>
-            </EventTrigger>
-        </Rectangle.Triggers>
-    </Rectangle>-->
 
-    <!--<TextBlock x:Name="textBlock" Text="HELLO">
-     <TextBlock.Triggers>
-         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-             <BeginStoryboard>
-                 <Storyboard RepeatBehavior="Forever" AutoReverse="True">
-                     <DoubleAnimation Storyboard.TargetName="textBlock" 
-                               Storyboard.TargetProperty="FontSize"
-                               From="10" To="30" 
-                               Duration="0:0:1"/>
-                  </Storyboard>
-             </BeginStoryboard>
-          </EventTrigger>
-      </TextBlock.Triggers>
-    </TextBlock>    -->
-
-    <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock
+    <Grid>
+        <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock
                 Name="MyRectangle"
                 Text="   Welcome to&#x0a;Macro Keyboard&#x0a;     Software"
                 FontFamily="verdana" FontSize="150">
-            <TextBlock.Triggers>
-                <!-- Animates the rectangle's opacity. -->
-                <EventTrigger RoutedEvent="Rectangle.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation
+                <TextBlock.Triggers>
+                    <!-- Animates the rectangle's opacity. -->
+                    <EventTrigger RoutedEvent="Rectangle.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
                                     Storyboard.TargetName="MyRectangle" 
                                     Storyboard.TargetProperty="Opacity"
                                     From="1.0" To="0.0" Duration="0:0:2" 
                                     AutoReverse="True" RepeatBehavior="Forever" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </TextBlock.Triggers>
-        </TextBlock>
-    </StackPanel>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel>
+            <Button Content="Show Popup (using Offset)" Click="ShowPopupOffsetClicked"/>
+        </StackPanel>
+        <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+    
 </Page>
  
