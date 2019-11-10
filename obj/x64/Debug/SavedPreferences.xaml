@@ -26,6 +26,7 @@
 
         <TextBlock x:ConnectionId='7' Grid.Row="1" Name="ResultTextBlock" FontSize="24" Foreground="Red" FontWeight="Bold" Margin="0,20,0,0" />
         <Button x:ConnectionId='8'                      />
+        <Button x:ConnectionId='9' Content="Remove"                       Margin="0,100,0,0"/>
     </Grid>
 
 </Page>

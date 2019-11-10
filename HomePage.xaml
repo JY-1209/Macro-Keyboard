@@ -32,19 +32,6 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel>
-            <Button Content="Show Popup (using Offset)" Click="ShowPopupOffsetClicked"/>
-        </StackPanel>
-        <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
-            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
-                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
-                BorderThickness="2" Width="200" Height="200">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
-                    <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Border>
-        </Popup>
     </Grid>
     
 </Page>

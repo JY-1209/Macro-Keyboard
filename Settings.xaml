@@ -36,56 +36,201 @@
                 CornerRadius="50,50,50,50" BorderBrush="Black" 
                 Background="Black"
                  Grid.Row="1" Grid.Column="1">
+            
         </Border>
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+
+        <Button Content="Save" Click="Button_Click"/>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="0,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="0,0,5,0" >
+            <StackPanel>
+                <Button Content="1" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="0,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="0,0,5,0">
+            <StackPanel>
+                <Button Content="6" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup1" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="2" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup2" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="2" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="7" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup3" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="3" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup4" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="3" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="8" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup5" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="4" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="4" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup6" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="4" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,5,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,5,0">
+            <StackPanel>
+                <Button Content="9" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup7" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="5" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,0,0"/>
-        
-        <Button Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Margin="5,0,0,0">
+            <StackPanel>
+                <Button Content="5" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup8" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
                 Background="White" CornerRadius="10" Grid.ColumnSpan="2"
-                Margin="5,0,0,0"/>
+                Margin="5,0,0,0">
+            <StackPanel>
+                <Button Content="10" Click="ShowPopupOffsetClicked"/>
+            </StackPanel>
+            <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup9" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
 
     </Grid>
 </Page>

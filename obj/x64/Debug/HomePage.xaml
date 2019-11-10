@@ -11,7 +11,7 @@
 
     <Grid>
         <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock x:ConnectionId='5'
+            <TextBlock x:ConnectionId='2'
                 Name="MyRectangle"
                 Text="   Welcome to&#x0a;Macro Keyboard&#x0a;     Software"
                 FontFamily="verdana" FontSize="150">
@@ -32,19 +32,6 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel>
-            <Button x:ConnectionId='4' Content="Show Popup (using Offset)"                               />
-        </StackPanel>
-        <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
-            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
-                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
-                BorderThickness="2" Width="200" Height="200">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
-                    <Button x:ConnectionId='3' Content="Close"                           HorizontalAlignment="Center"/>
-                </StackPanel>
-            </Border>
-        </Popup>
     </Grid>
     
 </Page>

@@ -26,6 +26,7 @@
 
         <TextBlock Grid.Row="1" Name="ResultTextBlock" FontSize="24" Foreground="Red" FontWeight="Bold" Margin="0,20,0,0" />
         <Button Click="Button_Click" />
+        <Button Content="Remove" Click="Button_Click1" Margin="0,100,0,0"/>
     </Grid>
 
 </Page>
