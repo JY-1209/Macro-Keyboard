@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,11 +22,16 @@ namespace Macro_Keyboard
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
     public sealed partial class Settings : Page
     {
+        public ObservableCollection<Settings> UpcomingSettings { get; private set; }
+        public ObservableCollection<Settings> MasterList { get; private set; }
+
         public Settings()
         {
             this.InitializeComponent();
+            OpenFile();
         }
 
         private void ClosePopupClicked(object sender, RoutedEventArgs e)
@@ -40,9 +47,36 @@ namespace Macro_Keyboard
             if (!StandardPopup.IsOpen) { StandardPopup.IsOpen = true; }
         }
 
+        async private void OpenFile()
+        {
+            Windows.Storage.StorageFolder storageFolder =
+                    Windows.Storage.ApplicationData.Current.LocalFolder;
+            try
+            {
+                Windows.Storage.StorageFile sampleFile =
+                        await storageFolder.GetFileAsync("sample.txt");
+                tbData.Text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
+            }
+            catch
+            {
+                tbData.Text = "This is the default text";
+            }
+        }
+
+        async private void SaveFile()
+        {
+            Windows.Storage.StorageFolder storageFolder =
+        Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile =
+                await storageFolder.CreateFileAsync("sample.txt",
+                    Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+            await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "This is a Save Test 2");
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            SaveFile();
         }
     }
 }

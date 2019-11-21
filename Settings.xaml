@@ -40,6 +40,9 @@
         </Border>
 
         <Button Content="Save" Click="Button_Click"/>
+        <!--&lt;default&gt;-->
+        <TextBlock x:Name="tbData" HorizontalAlignment="Center" Margin="0,0,0,0" Text="hi" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="2"/>
+        <Button Content="Button" Width="100" Height="100" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"  Click="Button_Click"/>
 
         <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
