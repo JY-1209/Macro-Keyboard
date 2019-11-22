@@ -126,11 +126,11 @@
       <DependentUpon>BackgroundPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SavedPreferences.xaml.cs">
-      <DependentUpon>SavedPreferences.xaml</DependentUpon>
+    <Compile Include="SavedSettingsPage.xaml.cs">
+      <DependentUpon>SavedSettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SavedSettings.cs" />
-    <Compile Include="SavedSettingsManager.cs" />
+    <Compile Include="SavedSettingsItem.cs" />
+    <Compile Include="SavedSettingsItemManager.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -164,7 +164,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SavedPreferences.xaml">
+    <Page Include="SavedSettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

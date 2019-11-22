@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Macro_Keyboard
 {
-    class SavedSettings
+    class SavedSettingsItem
     {
         public int SavedID { get; set; }
         public String Title { get; set; }

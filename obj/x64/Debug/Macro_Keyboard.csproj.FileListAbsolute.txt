@@ -166,3 +166,9 @@ C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\BackgroundPage.x
 C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsPage.xbf
 C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\BackgroundPage.xbf
 C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsPage.xbf
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Macro_Keyboard.csproj.CoreCompileInputs.cache
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SavedSettingsPage.g.i.cs
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SavedSettingsPage.g.cs
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SavedSettingsPage.xaml
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SavedSettingsPage.xbf
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SavedSettingsPage.xbf

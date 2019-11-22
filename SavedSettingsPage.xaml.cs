@@ -23,24 +23,24 @@ namespace Macro_Keyboard
     /// </summary>
     public sealed partial class SavedPreferences : Page
     {
-        private ObservableCollection<SavedSettings> SavedSettingsCollection;
+        private ObservableCollection<SavedSettingsItem> SavedSettingsCollection;
         int n = 2;
 
         public SavedPreferences()
         {
             this.InitializeComponent();
-            SavedSettingsCollection = SavedSettingsManager.getSettings();
+            SavedSettingsCollection = SavedSettingsItemManager.getSettings();
         }
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var SavedSetting = (SavedSettings)e.ClickedItem;
+            var SavedSetting = (SavedSettingsItem)e.ClickedItem;
             ResultTextBlock.Text = "Yoiu selected " + SavedSetting.Title;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SavedSettingsCollection.Add(new SavedSettings { SavedID = 1, Title = n+"st Setting", Setting1 = "Note: ", CoverImage = "Assets/1.jpg" });
+            SavedSettingsCollection.Add(new SavedSettingsItem { SavedID = 1, Title = n+"st Setting", Setting1 = "Note: ", CoverImage = "Assets/1.jpg" });
             n++;
         }
 

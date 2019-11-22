@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        <DataTemplate x:DataType="data:SavedSettings" x:Key="SavedSettingsDataTemplate">
+        <DataTemplate x:DataType="data:SavedSettingsItem" x:Key="SavedSettingsDataTemplate">
             <StackPanel HorizontalAlignment="Center">
                 <Image Width="150" Source="{x:Bind CoverImage}"/>
                 <TextBlock FontSize="16" Text="{x:Bind Title}" HorizontalAlignment="Center"/>
