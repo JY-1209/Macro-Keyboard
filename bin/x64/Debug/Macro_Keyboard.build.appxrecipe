@@ -76,14 +76,14 @@
     <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\BackgroundPage.xbf">
+      <PackagePath>BackgroundPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SavedPreferences.xbf">
       <PackagePath>SavedPreferences.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Settings.xbf">
-      <PackagePath>Settings.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

@@ -12,12 +12,12 @@
     <Grid>
         <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock x:ConnectionId='2'
-                Name="MyRectangle"
-                Text="   Welcome to&#x0a;Macro Keyboard&#x0a;     Software"
+                x:Name="MyRectangle"
+                Text="   Welcome to&#xA;Macro Keyboard&#xA;     Software"
                 FontFamily="verdana" FontSize="150">
                 <TextBlock.Triggers>
                     <!-- Animates the rectangle's opacity. -->
-                    <EventTrigger RoutedEvent="Rectangle.Loaded">
+                    <EventTrigger RoutedEvent="Canvas.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation
