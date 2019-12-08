@@ -14,7 +14,7 @@ namespace Macro_Keyboard
             var SavedSettingsCollection = new ObservableCollection<SavedSettingsItem>();
 
             int n = 1;
-            SavedSettingsCollection.Add(new SavedSettingsItem { SavedID = 1, Title = n + "st Setting", Setting1 = "Note: ", CoverImage = "Image.jfif" });
+            SavedSettingsCollection.Add(new SavedSettingsItem { SavedID = 1, Title = n + "st Setting", Setting1 = "Note: " });
             n++;
 
             return SavedSettingsCollection;

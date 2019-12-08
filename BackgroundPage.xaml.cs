@@ -14,8 +14,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 
-
-
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Macro_Keyboard
@@ -23,7 +21,6 @@ namespace Macro_Keyboard
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    /// 
 
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
@@ -54,7 +51,7 @@ namespace Macro_Keyboard
             }
 
             else if (SavedListBoxItem.IsSelected) {
-                InnerFrame.Navigate(typeof(SavedPreferences));
+                InnerFrame.Navigate(typeof(SettingsStoragePage));
                 Header.Text = "Saved";
             }
             BackButton.IsEnabled = true;
@@ -84,7 +81,7 @@ namespace Macro_Keyboard
                     }
                 }
 
-                else if (InnerFrame.Content.GetType() == typeof(SavedPreferences))
+                else if (InnerFrame.Content.GetType() == typeof(SettingsStoragePage))
                 {
                     Header.Text = "Saved";
                     IconsListBox.SelectedItem = SavedListBoxItem;

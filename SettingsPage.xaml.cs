@@ -25,26 +25,36 @@ namespace Macro_Keyboard
     /// 
     public sealed partial class Settings : Page
     {
-        public ObservableCollection<Settings> UpcomingSettings { get; private set; }
-        public ObservableCollection<Settings> MasterList { get; private set; }
 
-        private String block1Shortcut;
-        //private String block2Shortcut;
-        //private String block3Shortcut;
-        //private String block4Shortcut;
-        //private String block5Shortcut;
-        //private String block6Shortcut;
-        //private String block7Shortcut;
-        //private String block8TShortcut;
-        //private String block9TShortcut;
-        //private String block10TShortcut;
+        SavedSettingsItem newSettingItem = new SavedSettingsItem();
+        private int count = 0;
 
         public Settings()
         {
             this.InitializeComponent();
-            OpenFile();
+            //OpenFile();
             //OpenSettingsFile();
+            createSavedSettingsItem();
             OpenTemporaryKeyFile();
+            this.DataContext = this.newSettingItem;
+
+        }
+
+        public void createSavedSettingsItem()
+        {
+            newSettingItem = new SavedSettingsItem();
+
+            newSettingItem.Title = "Setting " + count + 1;
+            newSettingItem.Setting1 = "Testing " + (count + 1);
+            newSettingItem.Setting2 = "Testing " + (count + 1);
+            newSettingItem.Setting3 = "Testing " + (count + 1);                                                   
+            newSettingItem.Setting4 = "Testing " + (count + 1);
+            newSettingItem.Setting5 = "Testing " + (count + 1);
+            newSettingItem.Setting6 = "Testing " + (count + 1);
+            newSettingItem.Setting7 = "Testing " + (count + 1);
+            newSettingItem.Setting8 = "Testing " + (count + 1);
+            newSettingItem.Setting9 = "Testing " + (count + 1);
+            newSettingItem.Setting10 = "Testing " + (count + 1);
         }
 
         private void ClosePopupClicked(object sender, RoutedEventArgs e)
@@ -60,37 +70,38 @@ namespace Macro_Keyboard
             if (!StandardPopup.IsOpen) { StandardPopup.IsOpen = true; }
         }
 
-        async private void OpenFile()
-        {
-            Windows.Storage.StorageFolder storageFolder =
-                    Windows.Storage.ApplicationData.Current.LocalFolder;
-            try
-            {
-                Windows.Storage.StorageFile sampleFile =
-                        await storageFolder.GetFileAsync("sample.txt");
-                tbData.Text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
-            }
-            catch
-            {
-                tbData.Text = "This is the default text";
-            }
-        }
+        //Mr. George's Code:
+        //async private void OpenFile()
+        //{
+        //    Windows.Storage.StorageFolder storageFolder =
+        //            Windows.Storage.ApplicationData.Current.LocalFolder;
+        //    try
+        //    {
+        //        Windows.Storage.StorageFile sampleFile =
+        //                await storageFolder.GetFileAsync("sample.txt");
+        //        tbData.Text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
+        //    }
+        //    catch
+        //    {
+        //        tbData.Text = "This is the default text";
+        //    }
+        //}
 
-        async private void SaveFile()
-        {
-            Windows.Storage.StorageFolder storageFolder =
-        Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile =
-                await storageFolder.CreateFileAsync("sample.txt",
-                    Windows.Storage.CreationCollisionOption.ReplaceExisting);
+        //async private void SaveFile()
+        //{
+        //    Windows.Storage.StorageFolder storageFolder =
+        //Windows.Storage.ApplicationData.Current.LocalFolder;
+        //    Windows.Storage.StorageFile sampleFile =
+        //        await storageFolder.CreateFileAsync("sample.txt",
+        //            Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
-            await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "This is a Save Test 2");
-        }
+        //    await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "This is a Save Test 2");
+        //}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            SaveFile();
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    SaveFile();
+        //}
 
         //private void SaveSettings_Click(object sender, RoutedEventArgs e)
         //{
@@ -123,11 +134,6 @@ namespace Macro_Keyboard
         //}
 
         //Saving the temporary settings of each block
-        private void Block1Setting_Click(object sender, RoutedEventArgs e)
-        {
-            block1Shortcut = Block1.Text;
-            SaveTemporaryKeyValueFile();
-        }
 
         async private void OpenTemporaryKeyFile()
         {
@@ -137,27 +143,102 @@ namespace Macro_Keyboard
             {
                 Windows.Storage.StorageFile TemporaryKeyFile =
                         await storageFolder.GetFileAsync("TemporaryKey.txt");
-                Block1.Text = await Windows.Storage.FileIO.ReadTextAsync(TemporaryKeyFile);
+                String inputString = await Windows.Storage.FileIO.ReadTextAsync(TemporaryKeyFile);
+
+                // display text in txtfile
+                // tbData.Text = "input string is: " + inputString;
             }
+
             catch
             {
-                Block1.PlaceholderText = "Enter Command 1000000";
+
             }
+
+            Block1.Text = newSettingItem.Setting1;
+            Block2.Text = newSettingItem.Setting2;
+            Block3.Text = newSettingItem.Setting3;
+            Block4.Text = newSettingItem.Setting4;
+            Block5.Text = newSettingItem.Setting5;
+            Block6.Text = newSettingItem.Setting6;
+            Block7.Text = newSettingItem.Setting7;
+            Block8.Text = newSettingItem.Setting8;
+            Block9.Text = newSettingItem.Setting9;
+            Block10.Text = newSettingItem.Setting10;
         }
 
-        async private void SaveTemporaryKeyValueFile()
+        async private void SaveTemporaryKeyValueFile(int i)
         {
             Windows.Storage.StorageFolder storageFolder =
         Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile TemporaryKeyFile =
                 await storageFolder.CreateFileAsync("TemporaryKey.txt", Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
-            await Windows.Storage.FileIO.WriteTextAsync(TemporaryKeyFile, Block1.Text);
+            await Windows.Storage.FileIO.WriteTextAsync(TemporaryKeyFile, newSettingItem.Setting1);
+        }
+        private void AllSave_Click(object sender, RoutedEventArgs e)
+        {
+            count++;
+            this.Frame.Navigate(typeof(SettingsStoragePage), newSettingItem);
+
+        }
+        private void Setting1Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting1 = Block1.Text;
+            SaveTemporaryKeyValueFile(1);
         }
 
-        private void SaveSettings_Click(object sender, RoutedEventArgs e)
+        private void Setting2Save_Click(object sender, RoutedEventArgs e)
         {
+            newSettingItem.Setting2 = Block2.Text;
+            SaveTemporaryKeyValueFile(2);
+        }
 
+        private void Setting3Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting3 = Block3.Text;
+            SaveTemporaryKeyValueFile(3);
+        }
+
+        private void Setting4Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting4 = Block4.Text;
+            SaveTemporaryKeyValueFile(4);
+        }
+
+        private void Setting5Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting5 = Block5.Text;
+            SaveTemporaryKeyValueFile(5);
+        }
+
+        private void Setting6Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting6 = Block6.Text;
+            SaveTemporaryKeyValueFile(6);
+        }
+
+        private void Setting7Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting7 = Block7.Text;
+            SaveTemporaryKeyValueFile(7);
+        }
+
+        private void Setting8Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting8 = Block8.Text;
+            SaveTemporaryKeyValueFile(8);
+        }
+
+        private void Setting9Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting9 = Block9.Text;
+            SaveTemporaryKeyValueFile(9);
+        }
+
+        private void TextBox10Save_Click(object sender, RoutedEventArgs e)
+        {
+            newSettingItem.Setting10 = Block10.Text;
+            SaveTemporaryKeyValueFile(10);
         }
     }
 }

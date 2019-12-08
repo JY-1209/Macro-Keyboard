@@ -11,6 +11,6 @@ App.xbf
 BackgroundPage.xbf
 HomePage.xbf
 Macro_Keyboard.xr.xml
-SavedSettingsPage.xbf
 SettingsPage.xbf
+SettingsStoragePage.xbf
 Properties\Default.rd.xml

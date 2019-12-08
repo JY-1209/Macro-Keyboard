@@ -36,13 +36,14 @@
                 CornerRadius="50,50,50,50" BorderBrush="Black" 
                 Background="Black"
                  Grid.Row="1" Grid.Column="1">
-            
-        </Border>
 
-        <Button Content="Save" Click="SaveSettings_Click"/>
+        </Border>
+        
         <!--&lt;default&gt;-->
-        <TextBlock x:Name="tbData" HorizontalAlignment="Center" Margin="0,0,0,0" Text="hi" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="2"/>
-        <Button Content="Button" Width="100" Height="100" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"  Click="Button_Click"/>
+        <!--<TextBlock Name="tbData" HorizontalAlignment="Center" Margin="0,0,0,0" Text="hi" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="2"/>
+        <TextBlock Name="Setting1Text" HorizontalAlignment="Center" Margin="0,0,0,0" Text="Setting 1" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="3"/>-->
+        
+        <Button Content="All Save" Width="100" Height="100" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"  Click="AllSave_Click"/>
 
         <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
                 Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
@@ -54,8 +55,9 @@
                 
             </StackPanel>
             <TextBox Name="Block1" PlaceholderText="Enter command1:" HorizontalAlignment="Center" VerticalAlignment="Stretch"
-                     Margin="0,10,0,10"/>
-            <Button Name="Block1Text" Content="Save" HorizontalAlignment="Center" Click="Block1Setting_Click"/>
+                     Margin="0,10,0,10" Text="{x:Bind newSettingItem.Setting1, Mode=TwoWay}"/>
+            <Button Name="Block1TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting1Save_Click"/>
+            
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -78,6 +80,7 @@
                 
             </StackPanel>
             <TextBox Name="Block2" PlaceholderText="Enter command2:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block2TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting2Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup2" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -100,6 +103,7 @@
 
             </StackPanel>
             <TextBox Name="Block3" PlaceholderText="Enter command3:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block3TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting3Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup4" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -122,6 +126,7 @@
 
             </StackPanel>
             <TextBox Name="Block4" PlaceholderText="Enter command4:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block4TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting4Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup6" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -144,6 +149,7 @@
 
             </StackPanel>
             <TextBox Name="Block5" PlaceholderText="Enter command5:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block5TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting5Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup8" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -166,6 +172,7 @@
                 
             </StackPanel>
             <TextBox Name="Block6" PlaceholderText="Enter command6:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block6TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting6Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup1" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -189,6 +196,7 @@
 
             </StackPanel>
             <TextBox Name="Block7" PlaceholderText="Enter command7:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block7TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting7Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup3" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -211,6 +219,7 @@
 
             </StackPanel>
             <TextBox Name="Block8" PlaceholderText="Enter command8:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block8TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting8Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup5" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -233,6 +242,7 @@
 
             </StackPanel>
             <TextBox Name="Block9" PlaceholderText="Enter command9:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block9TextSave" Content="Save" HorizontalAlignment="Center" Click="Setting9Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup7" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -255,6 +265,7 @@
                 
             </StackPanel>
             <TextBox Name="Block10" PlaceholderText="Enter command10:" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Button Name="Block10TextSave" Content="Save" HorizontalAlignment="Center" Click="TextBox10Save_Click"/>
             <Popup VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup9" >
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"

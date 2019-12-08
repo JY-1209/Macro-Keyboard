@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Macro_Keyboard
 {
-    class SavedSettingsItem
+    public class SavedSettingsItem
     {
         public int SavedID { get; set; }
         public String Title { get; set; }
-        public String CoverImage { get; set; }
         public String Setting1 { get; set; }
         public String Setting2 { get; set; }
         public String Setting3 { get; set; }
@@ -19,5 +18,7 @@ namespace Macro_Keyboard
         public String Setting6 { get; set; }
         public String Setting7 { get; set; }
         public String Setting8 { get; set; }
+        public String Setting9 { get; set; }
+        public String Setting10 { get; set; }
     }
 }
