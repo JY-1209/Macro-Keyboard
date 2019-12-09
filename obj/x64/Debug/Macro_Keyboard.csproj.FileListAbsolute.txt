@@ -232,3 +232,8 @@ C:\Users\s-yangju\source\repos\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.
 C:\Users\s-yangju\source\repos\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.xaml
 C:\Users\s-yangju\source\repos\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.xbf
 C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\SettingsStoragePage.xbf
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsStoragePage.xbf
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.g.i.cs
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.g.cs
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.xaml
+C:\Users\s-yangju\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage.xbf

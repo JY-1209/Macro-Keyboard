@@ -25,7 +25,13 @@ namespace Macro_Keyboard
 
         private const string fileName = "data.xml";
         private const string JSONFILENAME = "data.json";
+
+        // This is for storing and serializing the SavedSettingItems
         List<string> JSONFILES;
+
+        // This is the text that goes inside the JSONFILES field
+        // string SerializedText = "";
+
 
         public SettingsStoragePage()
         {
@@ -33,7 +39,7 @@ namespace Macro_Keyboard
             JSONFILES = new List<string>();
             SavedSettingsCollection = SavedSettingsItemManager.getSettings();
             StoredSettings = new List<SavedSettingsItem>();
-            OpenFile();
+            // OpenFile();
         }
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
@@ -52,10 +58,14 @@ namespace Macro_Keyboard
         {
             if (e.Parameter is SavedSettingsItem)
             {
-                newSavedItem = (SavedSettingsItem)e.Parameter;
+                newSavedItem = (SavedSettingsItem) e.Parameter;
 
-                SavedSettingsCollection.Add(newSavedItem);
                 StoredSettings.Add(newSavedItem);
+                //await deserializeJsonAsyncInLocalFile();
+                //foreach (SavedSettingsItem item in StoredSettings)
+                //{
+                //    SavedSettingsCollection.Add(newSavedItem);
+                //}
                 await writeJsonAsync();
             }
 
@@ -75,19 +85,19 @@ namespace Macro_Keyboard
             ResultTextBlock.Text = "succeeded";
         }
 
-        private async Task readJsonAsync()
-        {
-            string content = String.Empty;
+        //private async Task readJsonAsync()
+        //{
+        //    string content = String.Empty;
 
-            var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
 
-            using (StreamReader reader = new StreamReader(myStream))
-            {
-                content = await reader.ReadToEndAsync();
-            }
+        //    using (StreamReader reader = new StreamReader(myStream))
+        //    {
+        //        content = await reader.ReadToEndAsync();
+        //    }
 
-            ResultTextBlock.Text = content;
-        }
+        //    ResultTextBlock.Text = content;
+        //}
 
         private async Task deserializeJsonAsync()
         {
@@ -108,6 +118,60 @@ namespace Macro_Keyboard
             ResultTextBlock.Text = content;
         }
 
+        //private async void deserializeToStoredSettings()
+        //{
+        //    List<SavedSettingsItem> updatedList;
+        //    var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
+
+        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+
+        //    updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
+
+        //    foreach (var SavedItem in updatedList)
+        //    {
+        //        StoredSettings.Add(SavedItem);
+        //    }
+        //}
+
+        //private async Task deserializeJsonAsyncInLocalFile()
+        //{
+        //    string content = String.Empty;
+
+        //    List<SavedSettingsItem> updatedList;
+        //    var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
+
+        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+
+        //    updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
+
+        //    foreach (var SavedItem in updatedList)
+        //    {
+        //        content += String.Format("ID: {0}, Setting1: {1}, Setting2: {2} ... ", SavedItem.SavedID, SavedItem.Setting1, SavedItem.Setting2);
+        //    }
+
+        //    ResultTextBlock.Text = content;
+        //}
+
+        //async private void OpenFile()
+        //{
+        //    Windows.Storage.StorageFolder storageFolder =
+        //            Windows.Storage.ApplicationData.Current.LocalFolder;
+        //    try
+        //    {
+        //        foreach (string Filename in JSONFILENAME)
+        //        {
+        //            Windows.Storage.StorageFile sampleFile =
+        //                await storageFolder.GetFileAsync(Filename);
+
+        //        }
+
+        //    }
+        //    catch
+        //    {
+        //        TextinFile.Text = "Default Text";
+        //    }
+        //}
+
         private void StoredSettingRemove_Click(object sender, RoutedEventArgs e)
         {
 
@@ -118,52 +182,7 @@ namespace Macro_Keyboard
             await deserializeJsonAsync();
         }
 
-        async private void OpenFile()
-        {
-            Windows.Storage.StorageFolder storageFolder =
-                    Windows.Storage.ApplicationData.Current.LocalFolder;
-            try
-            {
-                foreach (string Filename in JSONFILES)
-                {
-                    Windows.Storage.StorageFile sampleFile =
-                        await storageFolder.GetFileAsync(Filename);
 
-                }
-                
-            }
-            catch
-            {
-                TextinFile.Text = "Default Text";
-            }
-        }
-
-        //async private void SaveFile()
-        //{
-        //    Windows.Storage.StorageFolder storageFolder =
-        //Windows.Storage.ApplicationData.Current.LocalFolder;
-        //    Windows.Storage.StorageFile sampleFile =
-        //        await storageFolder.CreateFileAsync("StoredSettingsFile.txt",
-        //            Windows.Storage.CreationCollisionOption.ReplaceExisting);
-
-        //    await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "This is a Save Test 2");
-        //}
-
-        //async private void OpenSettingsFile()
-        //{
-        //    Windows.Storage.StorageFolder storageFolder =
-        //            Windows.Storage.ApplicationData.Current.LocalFolder;
-        //    try
-        //    {
-        //        Windows.Storage.StorageFile SettingsFile =
-        //                await storageFolder.GetFileAsync("StoredSettingsFile.txt");
-        //        tbData.Text = await Windows.Storage.FileIO.ReadTextAsync(SettingsFile);
-        //    }
-        //    catch
-        //    {
-        //        tbData.Text = "Insert";
-        //    }
-        //}
 
         // delete the rest of this section later:
         //async private void SaveFile()
