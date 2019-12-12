@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -27,7 +28,10 @@ namespace Macro_Keyboard
     {
 
         SavedSettingsItem newSettingItem = new SavedSettingsItem();
-        private int count = 0;
+        private int SavedID = 0;
+        private Boolean isModified = false;
+        SavedSettingsItem ModifiedSettingItem;
+        private const string JSONFILENAME = "data.json";
 
         public Settings()
         {
@@ -37,24 +41,23 @@ namespace Macro_Keyboard
             createSavedSettingsItem();
             OpenTemporaryKeyFile();
             this.DataContext = this.newSettingItem;
-
         }
 
         public void createSavedSettingsItem()
         {
             newSettingItem = new SavedSettingsItem();
 
-            newSettingItem.Title = "Setting " + count + 1;
-            newSettingItem.Setting1 = "Testing " + (count + 1);
-            newSettingItem.Setting2 = "Testing " + (count + 1);
-            newSettingItem.Setting3 = "Testing " + (count + 1);                                                   
-            newSettingItem.Setting4 = "Testing " + (count + 1);
-            newSettingItem.Setting5 = "Testing " + (count + 1);
-            newSettingItem.Setting6 = "Testing " + (count + 1);
-            newSettingItem.Setting7 = "Testing " + (count + 1);
-            newSettingItem.Setting8 = "Testing " + (count + 1);
-            newSettingItem.Setting9 = "Testing " + (count + 1);
-            newSettingItem.Setting10 = "Testing " + (count + 1);
+            newSettingItem.Title = "Setting " + SavedID ;
+            newSettingItem.Setting1 = "Blank " + (SavedID);
+            newSettingItem.Setting2 = "Blank " + (SavedID );
+            newSettingItem.Setting3 = "Blank " + (SavedID);                                                   
+            newSettingItem.Setting4 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting5 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting6 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting7 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting8 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting9 = "Blank " + (SavedID + 0);
+            newSettingItem.Setting10 = "Blank " + (SavedID + 0);
         }
 
         private void ClosePopupClicked(object sender, RoutedEventArgs e)
@@ -144,9 +147,6 @@ namespace Macro_Keyboard
                 Windows.Storage.StorageFile TemporaryKeyFile =
                         await storageFolder.GetFileAsync("TemporaryKey.txt");
                 String inputString = await Windows.Storage.FileIO.ReadTextAsync(TemporaryKeyFile);
-
-                // display text in txtfile
-                // tbData.Text = "input string is: " + inputString;
             }
 
             catch
@@ -154,16 +154,16 @@ namespace Macro_Keyboard
 
             }
 
-            Block1.Text = newSettingItem.Setting1;
-            Block2.Text = newSettingItem.Setting2;
-            Block3.Text = newSettingItem.Setting3;
-            Block4.Text = newSettingItem.Setting4;
-            Block5.Text = newSettingItem.Setting5;
-            Block6.Text = newSettingItem.Setting6;
-            Block7.Text = newSettingItem.Setting7;
-            Block8.Text = newSettingItem.Setting8;
-            Block9.Text = newSettingItem.Setting9;
-            Block10.Text = newSettingItem.Setting10;
+            //Block1.Text = newSettingItem.Setting1;
+            //Block2.Text = newSettingItem.Setting2;
+            //Block3.Text = newSettingItem.Setting3;
+            //Block4.Text = newSettingItem.Setting4;
+            //Block5.Text = newSettingItem.Setting5;
+            //Block6.Text = newSettingItem.Setting6;
+            //Block7.Text = newSettingItem.Setting7;
+            //Block8.Text = newSettingItem.Setting8;
+            //Block9.Text = newSettingItem.Setting9;
+            //Block10.Text = newSettingItem.Setting10;
         }
 
         async private void SaveTemporaryKeyValueFile(int i)
@@ -175,70 +175,74 @@ namespace Macro_Keyboard
 
             await Windows.Storage.FileIO.WriteTextAsync(TemporaryKeyFile, newSettingItem.Setting1);
         }
-        private void AllSave_Click(object sender, RoutedEventArgs e)
+        private async void AllSave_Click(object sender, RoutedEventArgs e)
         {
-            count++;
-            this.Frame.Navigate(typeof(SettingsStoragePage), newSettingItem);
+            if (isModified)
+            {
+                ModifiedSettingItem.Setting1 = Block1.Text;
+                ModifiedSettingItem.Setting2 = Block2.Text;
+                ModifiedSettingItem.Setting3 = Block3.Text;
+                ModifiedSettingItem.Setting4 = Block4.Text;
+                ModifiedSettingItem.Setting5 = Block5.Text;
+                ModifiedSettingItem.Setting6 = Block6.Text;
+                ModifiedSettingItem.Setting7 = Block7.Text;
+                ModifiedSettingItem.Setting8 = Block8.Text;
+                ModifiedSettingItem.Setting9 = Block9.Text;
+                ModifiedSettingItem.Setting10 = Block10.Text;
+                ModifiedSettingItem.Title = TitleBlock.Text;
+                isModified = false;
+                this.Frame.Navigate(typeof(SettingsStoragePage), ModifiedSettingItem);
+            }
 
-        }
-        private void Setting1Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting1 = Block1.Text;
-            SaveTemporaryKeyValueFile(1);
-        }
+            else
+            {
+                List<SavedSettingsItem> updatedList;
 
-        private void Setting2Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting2 = Block2.Text;
-            SaveTemporaryKeyValueFile(2);
-        }
+                var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
 
-        private void Setting3Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting3 = Block3.Text;
-            SaveTemporaryKeyValueFile(3);
-        }
+                var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
 
-        private void Setting4Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting4 = Block4.Text;
-            SaveTemporaryKeyValueFile(4);
-        }
+                updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
 
-        private void Setting5Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting5 = Block5.Text;
-            SaveTemporaryKeyValueFile(5);
-        }
+                newSettingItem.SavedID = updatedList.Count;
+                SavedIDText.Text = "" + newSettingItem.SavedID;
+                // SavedID++;
 
-        private void Setting6Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting6 = Block6.Text;
-            SaveTemporaryKeyValueFile(6);
+                newSettingItem.Setting1 = Block1.Text;
+                newSettingItem.Setting2 = Block2.Text;
+                newSettingItem.Setting3 = Block3.Text;
+                newSettingItem.Setting4 = Block4.Text;
+                newSettingItem.Setting5 = Block5.Text;
+                newSettingItem.Setting6 = Block6.Text;
+                newSettingItem.Setting7 = Block7.Text;
+                newSettingItem.Setting8 = Block8.Text;
+                newSettingItem.Setting9 = Block9.Text;
+                newSettingItem.Setting10 = Block10.Text;
+                newSettingItem.Title = TitleBlock.Text;
+                this.Frame.Navigate(typeof(SettingsStoragePage), newSettingItem);
+            }
+            
         }
-
-        private void Setting7Save_Click(object sender, RoutedEventArgs e)
+   
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            newSettingItem.Setting7 = Block7.Text;
-            SaveTemporaryKeyValueFile(7);
-        }
-
-        private void Setting8Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting8 = Block8.Text;
-            SaveTemporaryKeyValueFile(8);
-        }
-
-        private void Setting9Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting9 = Block9.Text;
-            SaveTemporaryKeyValueFile(9);
-        }
-
-        private void TextBox10Save_Click(object sender, RoutedEventArgs e)
-        {
-            newSettingItem.Setting10 = Block10.Text;
-            SaveTemporaryKeyValueFile(10);
+            if (e.Parameter is SavedSettingsItem)
+            {
+                isModified = true;
+                ModifiedSettingItem = (SavedSettingsItem)e.Parameter;
+                Block1.Text = ModifiedSettingItem.Setting1;
+                Block2.Text = ModifiedSettingItem.Setting2;
+                Block3.Text = ModifiedSettingItem.Setting3;
+                Block4.Text = ModifiedSettingItem.Setting4;
+                Block5.Text = ModifiedSettingItem.Setting5;
+                Block6.Text = ModifiedSettingItem.Setting6;
+                Block7.Text = ModifiedSettingItem.Setting7;
+                Block8.Text = ModifiedSettingItem.Setting8;
+                Block9.Text = ModifiedSettingItem.Setting9;
+                Block10.Text = ModifiedSettingItem.Setting10;
+                SavedIDText.Text = "SavedID is: " + ModifiedSettingItem.SavedID;
+                TitleBlock.Text = ModifiedSettingItem.Title;
+            }
         }
     }
 }

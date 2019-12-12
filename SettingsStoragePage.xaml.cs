@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -19,18 +20,15 @@ namespace Macro_Keyboard
     public sealed partial class SettingsStoragePage : Page
     {
         private ObservableCollection<SavedSettingsItem> SavedSettingsCollection;
-        int n = 2;
+        // int n = 2;
         SavedSettingsItem newSavedItem;
         List<SavedSettingsItem> StoredSettings;
 
         private const string fileName = "data.xml";
-        private const string JSONFILENAME = "data.json";
 
+        private const string JSONFILENAME = "data.json";
         // This is for storing and serializing the SavedSettingItems
         List<string> JSONFILES;
-
-        // This is the text that goes inside the JSONFILES field
-        // string SerializedText = "";
 
 
         public SettingsStoragePage()
@@ -39,19 +37,14 @@ namespace Macro_Keyboard
             JSONFILES = new List<string>();
             SavedSettingsCollection = SavedSettingsItemManager.getSettings();
             StoredSettings = new List<SavedSettingsItem>();
-            // OpenFile();
+            OpenFile();
+            CountTextBlock.Text = "Number of Saved Items: " + StoredSettings.Count;
         }
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var SavedSetting = (SavedSettingsItem)e.ClickedItem;
-            ResultTextBlock.Text = "You selected " + SavedSetting.Title;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            SavedSettingsCollection.Add(new SavedSettingsItem { SavedID = 1, Title = n + "st Setting", Setting1 = "Note: " });
-            n++;
+            var SavedSetting = (SavedSettingsItem) e.ClickedItem;
+            this.Frame.Navigate(typeof(Settings), SavedSetting);
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
@@ -59,16 +52,41 @@ namespace Macro_Keyboard
             if (e.Parameter is SavedSettingsItem)
             {
                 newSavedItem = (SavedSettingsItem) e.Parameter;
+                await deserializeToStoredSettings();
 
-                StoredSettings.Add(newSavedItem);
-                //await deserializeJsonAsyncInLocalFile();
-                //foreach (SavedSettingsItem item in StoredSettings)
-                //{
-                //    SavedSettingsCollection.Add(newSavedItem);
-                //}
+                if (newSavedItem.SavedID < StoredSettings.Count)
+                {
+                    StoredSettings.Insert(newSavedItem.SavedID, newSavedItem);
+                    StoredSettings.RemoveAt(newSavedItem.SavedID + 1);
+                    SavedSettingsCollection.Clear();
+                    foreach (SavedSettingsItem i in StoredSettings)
+                    {
+                        SavedSettingsCollection.Add(i);
+                    }
+                }
+
+                else
+                {
+                    StoredSettings.Add(newSavedItem);
+                    SavedSettingsCollection.Add(newSavedItem);
+
+                    ResultTextBlock.Text = "There are: " + StoredSettings.Count;
+                }
+
                 await writeJsonAsync();
             }
 
+            CountTextBlock.Text = "Number of Saved Items: " + StoredSettings.Count;
+        }
+
+        private async Task deserializeToStoredSettings()
+        {
+            //List<SavedSettingsItem> updatedList;
+            var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
+
+            var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+
+            StoredSettings = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
         }
 
 
@@ -79,25 +97,10 @@ namespace Macro_Keyboard
             var serializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
             using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(JSONFILENAME, CreationCollisionOption.ReplaceExisting))
             {
+                // actual code for serializing the class
                 serializer.WriteObject(stream, StoredSettings);
             }
-
-            ResultTextBlock.Text = "succeeded";
         }
-
-        //private async Task readJsonAsync()
-        //{
-        //    string content = String.Empty;
-
-        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
-
-        //    using (StreamReader reader = new StreamReader(myStream))
-        //    {
-        //        content = await reader.ReadToEndAsync();
-        //    }
-
-        //    ResultTextBlock.Text = content;
-        //}
 
         private async Task deserializeJsonAsync()
         {
@@ -118,63 +121,26 @@ namespace Macro_Keyboard
             ResultTextBlock.Text = content;
         }
 
-        //private async void deserializeToStoredSettings()
-        //{
-        //    List<SavedSettingsItem> updatedList;
-        //    var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
+        async private void OpenFile()
+        {
+            List<SavedSettingsItem> updatedList;
 
-        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
+            var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
 
-        //    updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
+            var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
 
-        //    foreach (var SavedItem in updatedList)
-        //    {
-        //        StoredSettings.Add(SavedItem);
-        //    }
-        //}
+            updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
 
-        //private async Task deserializeJsonAsyncInLocalFile()
-        //{
-        //    string content = String.Empty;
-
-        //    List<SavedSettingsItem> updatedList;
-        //    var JsonSerializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
-
-        //    var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(JSONFILENAME);
-
-        //    updatedList = (List<SavedSettingsItem>)JsonSerializer.ReadObject(myStream);
-
-        //    foreach (var SavedItem in updatedList)
-        //    {
-        //        content += String.Format("ID: {0}, Setting1: {1}, Setting2: {2} ... ", SavedItem.SavedID, SavedItem.Setting1, SavedItem.Setting2);
-        //    }
-
-        //    ResultTextBlock.Text = content;
-        //}
-
-        //async private void OpenFile()
-        //{
-        //    Windows.Storage.StorageFolder storageFolder =
-        //            Windows.Storage.ApplicationData.Current.LocalFolder;
-        //    try
-        //    {
-        //        foreach (string Filename in JSONFILENAME)
-        //        {
-        //            Windows.Storage.StorageFile sampleFile =
-        //                await storageFolder.GetFileAsync(Filename);
-
-        //        }
-
-        //    }
-        //    catch
-        //    {
-        //        TextinFile.Text = "Default Text";
-        //    }
-        //}
+            foreach (var SavedItem in updatedList)
+            {
+                StoredSettings.Add(SavedItem);
+                SavedSettingsCollection.Add(SavedItem);
+            }
+        }
 
         private void StoredSettingRemove_Click(object sender, RoutedEventArgs e)
         {
-
+            ResultTextBlock.Text = "There are: " + StoredSettings.Count + " items";
         }
 
         private async void Deserialize_Click(object sender, RoutedEventArgs e)
@@ -182,34 +148,16 @@ namespace Macro_Keyboard
             await deserializeJsonAsync();
         }
 
-
-
-        // delete the rest of this section later:
-        //async private void SaveFile()
-        //{
-        //    Windows.Storage.StorageFolder storageFolder =
-        //Windows.Storage.ApplicationData.Current.LocalFolder;
-        //    Windows.Storage.StorageFile sampleFile =
-        //        await storageFolder.CreateFileAsync("StoredSettingsFile.txt",
-        //            Windows.Storage.CreationCollisionOption.ReplaceExisting);
-
-        //    await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "This is a Save Test 2");
-        //}
-
-        //async private void OpenSettingsFile()
-        //{
-        //    Windows.Storage.StorageFolder storageFolder =
-        //            Windows.Storage.ApplicationData.Current.LocalFolder;
-        //    try
-        //    {
-        //        Windows.Storage.StorageFile SettingsFile =
-        //                await storageFolder.GetFileAsync("StoredSettingsFile.txt");
-        //        tbData.Text = await Windows.Storage.FileIO.ReadTextAsync(SettingsFile);
-        //    }
-        //    catch
-        //    {
-        //        tbData.Text = "Insert";
-        //    }
-        //}
+        private async void DeleteAll_Click(object sender, RoutedEventArgs e)
+        {
+            StoredSettings.Clear();
+            SavedSettingsCollection.Clear();
+            var serializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
+            using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(JSONFILENAME, CreationCollisionOption.ReplaceExisting))
+            {
+                // actual code for serializing the class
+                serializer.WriteObject(stream, StoredSettings);
+            }
+        }
     }
 }
