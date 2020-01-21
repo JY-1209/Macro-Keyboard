@@ -93,7 +93,7 @@ namespace Macro_Keyboard
         // Code for serializing SavedSettingsItem 
 
         private async Task writeJsonAsync()
-        {
+        {   
             var serializer = new DataContractJsonSerializer(typeof(List<SavedSettingsItem>));
             using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(JSONFILENAME, CreationCollisionOption.ReplaceExisting))
             {

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\s-yangju\\source\\repos\\Macro-Keyboard\\Macro_Keyboard.csproj": {}
+    "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\s-yangju\\source\\repos\\Macro-Keyboard\\Macro_Keyboard.csproj": {
+    "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s-yangju\\source\\repos\\Macro-Keyboard\\Macro_Keyboard.csproj",
+        "projectUniqueName": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj",
         "projectName": "Macro_Keyboard",
-        "projectPath": "C:\\Users\\s-yangju\\source\\repos\\Macro-Keyboard\\Macro_Keyboard.csproj",
-        "packagesPath": "C:\\Users\\s-yangju\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s-yangju\\source\\repos\\Macro-Keyboard\\obj\\",
+        "projectPath": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\Macro_Keyboard.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\justi\\Documents\\GitHub\\Macro-Keyboard\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\s-yangju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
