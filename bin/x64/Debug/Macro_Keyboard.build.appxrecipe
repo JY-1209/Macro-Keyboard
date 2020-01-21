@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>YOONSY_DESKTOP</Machine>
-    <WindowsUser>justi</WindowsUser>
+    <Machine>51S500035878</Machine>
+    <WindowsUser>s-yangju</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>bb2ebec5-2d79-4f60-8172-a310f1737348</PackageIdentityName>
     <PackageIdentityPublisher>CN=justi</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\s-yangju\source\repos\Macro-Keyboard\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.exe">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.exe">
       <PackagePath>entrypoint\Macro_Keyboard.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,64 +34,64 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Image.jfif">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\Image.jfif">
       <PackagePath>Assets\Image.jfif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.xr.xml">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\Macro_Keyboard.xr.xml">
       <PackagePath>Macro_Keyboard.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\BackgroundPage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\BackgroundPage.xbf">
       <PackagePath>BackgroundPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsStoragePage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\SettingsStoragePage.xbf">
       <PackagePath>SettingsStoragePage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Core\Macro_Keyboard.exe">
+    <AppxPackagedFile Include="C:\Users\s-yangju\source\repos\Macro-Keyboard\bin\x64\Debug\Core\Macro_Keyboard.exe">
       <PackagePath>Macro_Keyboard.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

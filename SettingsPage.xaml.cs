@@ -36,6 +36,8 @@ namespace Macro_Keyboard
         public Settings()
         {
             this.InitializeComponent();
+            //OpenFile();
+            //OpenSettingsFile();
             createSavedSettingsItem();
             OpenTemporaryKeyFile();
             this.DataContext = this.newSettingItem;
