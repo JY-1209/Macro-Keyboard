@@ -146,7 +146,7 @@ namespace Macro_Keyboard
         private async void Deserialize_Click(object sender, RoutedEventArgs e)
         {
             await deserializeJsonAsync();
-        }
+        }   
 
         private async void DeleteAll_Click(object sender, RoutedEventArgs e)
         {

@@ -22,12 +22,8 @@
         <TextBlock x:Name="TextinFile" Text="Textblock is here" Width="200" Height="100" VerticalAlignment="Top" Margin="0,50,0,0" TextWrapping="Wrap"/>
         <GridView ItemsSource="{x:Bind SavedSettingsCollection}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick"
                   ItemTemplate="{StaticResource SavedSettingsDataTemplate}">
-
-
         </GridView>
         
-        
-
         <TextBlock Grid.Row="1" Name="ResultTextBlock" FontSize="24" Foreground="Red" FontWeight="Bold" Margin="0,20,0,0"/>
         <TextBlock Grid.Row="1" Name="CountTextBlock" FontSize="24" Foreground="Red" FontWeight="Bold" VerticalAlignment="Bottom"/>
         <Button Content="Remove" Click="StoredSettingRemove_Click" Margin="0,534,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -36,4 +32,3 @@
     </Grid>
 
 </Page>
-    

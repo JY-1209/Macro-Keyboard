@@ -1,0 +1,280 @@
+﻿<Page
+    x:Class="Macro_Keyboard.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Macro_Keyboard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:ConnectionId='2' Name="TitleBlock" FontSize="50" PlaceholderText="Enter title" Grid.ColumnSpan="10" Grid.RowSpan="10" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Cambria" />
+
+
+        <!--<Rectangle Height="600" Width="1200" Fill="Black" Grid.ColumnSpan="10" Grid.RowSpan="10"
+                   CornerRadius="10"/>-->
+        <Border BorderThickness="1" Grid.RowSpan="5" Grid.ColumnSpan="6" 
+                CornerRadius="50,50,50,50" BorderBrush="Black" 
+                Background="Black"
+                 Grid.Row="1" Grid.Column="1">
+
+        </Border>
+        
+        <!--&lt;default&gt;-->
+        <!--<TextBlock Name="tbData" HorizontalAlignment="Center" Margin="0,0,0,0" Text="hi" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="2"/>
+        <TextBlock Name="Setting1Text" HorizontalAlignment="Center" Margin="0,0,0,0" Text="Setting 1" TextWrapping="Wrap" VerticalAlignment="bottom" Height="100" Width="100" Grid.Row="3"/>-->
+
+        <Button x:ConnectionId='3' Content="All Save" Width="100" Height="100" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"                       />
+        <TextBlock x:ConnectionId='4' x:Name="SavedIDText" Text="SavedID" Width="100" Height="100" Grid.Column="0" Grid.Row="2"  />
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="0,0,5,0" >
+            <StackPanel>
+                
+                <Button x:ConnectionId='44' Content="Details1"                               />
+                
+            </StackPanel>
+            <TextBox x:ConnectionId='41' Name="Block1" PlaceholderText="Enter command1:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <!--Text="{x:Bind newSettingItem.Setting1, Mode=TwoWay}"-->
+
+            <Popup x:ConnectionId='42' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='43' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+                
+                <Button x:ConnectionId='40' Content="Details2"                               />
+                
+            </StackPanel>
+            <TextBox x:ConnectionId='37' Name="Block2" PlaceholderText="Enter command2:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria" />
+           
+            <Popup x:ConnectionId='38' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup2" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='39' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='36' Content="Details3"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='33' Name="Block3" PlaceholderText="Enter command3:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            
+            <Popup x:ConnectionId='34' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup4" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='35' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="4" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='32' Content="Details4"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='29' Name="Block4" PlaceholderText="Enter command4:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria" />
+         
+            <Popup x:ConnectionId='30' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup6" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='31' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="5" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,0,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='28' Content="Details5"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='25' Name="Block5" PlaceholderText="Enter command5:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria" />
+            <Popup x:ConnectionId='26' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup8" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='27' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="0,0,5,0">
+            <StackPanel>
+                
+                <Button x:ConnectionId='24' Content="Details6"                               />
+                
+            </StackPanel>
+            <TextBox x:ConnectionId='21' Name="Block6" PlaceholderText="Enter command6:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <Popup x:ConnectionId='22' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup1" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='23' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="2" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='20' Content="Details7"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='17' Name="Block7" PlaceholderText="Enter command7:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <Popup x:ConnectionId='18' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup3" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='19' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="3" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='16' Content="Details8"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='13' Name="Block8" PlaceholderText="Enter command8:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <Popup x:ConnectionId='14' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup5" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='15' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="4" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,5,0">
+            <StackPanel>
+
+                <Button x:ConnectionId='12' Content="Details9"                               />
+
+            </StackPanel>
+            <TextBox x:ConnectionId='9' Name="Block9" PlaceholderText="Enter command9:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <Popup x:ConnectionId='10' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup7" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='11' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+        <StackPanel Height ="170" Width="170" BorderThickness="2" BorderBrush="White" 
+                Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" HorizontalAlignment="Center"
+                Background="White" CornerRadius="10" Grid.ColumnSpan="2"
+                Margin="5,0,0,0">
+            <StackPanel>
+                
+                <Button x:ConnectionId='8' Content="Details10"                               />
+                
+            </StackPanel>
+            <TextBox x:ConnectionId='5' Name="Block10" PlaceholderText="Enter command10:" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Cambria"/>
+            <Popup x:ConnectionId='6' VerticalOffset="10" HorizontalOffset="200" x:Name="StandardPopup9" >
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="200" Height="200">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
+                        <Button x:ConnectionId='7' Content="Close"                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </StackPanel>
+
+    </Grid>
+</Page>
+
