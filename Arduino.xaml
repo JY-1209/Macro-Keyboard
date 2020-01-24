@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="newbut" Height="100" Width="200" Content="hello" FontSize="20" Click="newbut_Click"/>
+
     </Grid>
 </Page>

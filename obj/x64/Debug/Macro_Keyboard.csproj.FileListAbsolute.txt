@@ -239,8 +239,3 @@ C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsStoragePage
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\SettingsPage.xbf
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758804200000000.json
 C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758840200000000.json
-C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Arduino.g.i.cs
-C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Arduino.g.cs
-C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Arduino.xaml
-C:\Users\justi\Documents\GitHub\Macro-Keyboard\obj\x64\Debug\Arduino.xbf
-C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Arduino.xbf

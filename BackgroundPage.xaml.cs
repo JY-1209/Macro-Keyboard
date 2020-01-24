@@ -54,13 +54,6 @@ namespace Macro_Keyboard
                 InnerFrame.Navigate(typeof(SettingsStoragePage));
                 Header.Text = "Saved";
             }
-
-            else if (ArduinoListBoxItem.IsSelected)
-            {
-                InnerFrame.Navigate(typeof(Arduino));
-                Header.Text = "Arduino";
-            }
-
             BackButton.IsEnabled = true;
         }
 
@@ -91,16 +84,6 @@ namespace Macro_Keyboard
                 else if (InnerFrame.Content.GetType() == typeof(SettingsStoragePage))
                 {
                     Header.Text = "Saved";
-                    IconsListBox.SelectedItem = SavedListBoxItem;
-                    if (InnerFrame.BackStack.Count > 0)
-                    {
-                        InnerFrame.GoBack();
-                    }
-                }
-
-                else if (InnerFrame.Content.GetType() == typeof(Arduino))
-                {
-                    Header.Text = "Arduino";
                     IconsListBox.SelectedItem = SavedListBoxItem;
                     if (InnerFrame.BackStack.Count > 0)
                     {

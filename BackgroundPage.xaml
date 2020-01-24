@@ -55,14 +55,6 @@
                         </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Name="ArduinoListBoxItem" FontFamily="Verdana">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE703;" 
-                                       Margin="6,0,0,0"/>
-                            <TextBlock Text="Arduino" FontSize="24" Margin="40,0,0,0" FontFamily="Verdana" />
-                        </StackPanel>
-                    </ListBoxItem>
-
                 </ListBox>
             </SplitView.Pane>
 
