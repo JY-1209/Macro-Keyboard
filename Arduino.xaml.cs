@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Enumeration;
+using Windows.Devices.SerialCommunication;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -12,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.IO.Ports;
+using Windows.Storage.Streams;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +27,13 @@ namespace Macro_Keyboard
     /// </summary>
     public sealed partial class Arduino : Page
     {
+        bool isConnected = false;
+        String[] ports;
+        SerialPort port; 
         public Arduino()
         {
             this.InitializeComponent();
+            ports = SerialPort.GetPortNames();
             // Jeffrey gave this to me:
             //string aqs = SerialDevice.GetDeviceSelectorFromUsbVidPid(vid, pid);
             //var infoCollection = await DeviceInformation.FindAllAsync(aqs);
@@ -40,43 +49,63 @@ namespace Macro_Keyboard
             //outWriter = new DataWriter(outputStream);
         }
 
-
-        private async void loginContinueClick(object sender, RoutedEventArgs e)
+        void getAvailablePorts()
         {
+            String[] ports = SerialPort.GetPortNames();
+        }
 
-            var filter = SerialDevice.GetDeviceSelector("COM10");
-            var devices = await DeviceInformation.FindAllAsync(filter);
-            if (devices.Any())
+        //public void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (!isConnected)
+        //    {
+        //        ConnectToArduino();
+        //    }
+
+        //    else
+        //    {
+        //        disconnectfromArduino();
+        //    }
+        //}
+
+        //private void connectToArduino()
+        //{
+        //    isConnected = true;
+        //    port = new SerialPort("10", 9600, Parity.None, 8, StopBits.One);
+        //    port.Open();
+        //    port.Write("#STAR\n");
+        //    button1.text = "Disconnect";
+        //    enableControls();
+        //}
+
+        private async void ConnectToSerialPort()
+        {
+            string selector = SerialDevice.GetDeviceSelector("COM7");
+            DeviceInformationCollection devices = await DeviceInformation.FindAllAsync(selector);
+            if (devices.Count > 0)
             {
-                var deviceId = devices.First().Id;
-                this.device = await SerialDevice.FromIdAsync(deviceId);
+                DeviceInformation deviceInfo = devices[0];
+                SerialDevice serialDevice = await SerialDevice.FromIdAsync(deviceInfo.Id);
+                serialDevice.BaudRate = 9600;
+                serialDevice.DataBits = 8;
+                serialDevice.StopBits = SerialStopBitCount.Two;
+                serialDevice.Parity = SerialParity.None;
 
-                if (this.device != null)
-                {
-                    this.device.BaudRate = 9600;
-                    this.device.StopBits = SerialStopBitCount.One;
-                    this.device.DataBits = 8;
-                    this.device.Parity = SerialParity.None;
-                    this.device.Handshake = SerialHandshake.None;
-
-                    this.dataReader = new DataReader(this.device.InputStream);
-
-                    Speak("Device found");
-
-                    while (true)
-                    {
-                        var bytesRecieved = await this.dataReader.LoadAsync(128);
-                        if (bytesRecieved > 0)
-                        {
-
-                            ElementsRead.Text = this.dataReader.ReadString(bytesRecieved).Trim();
-                        }
-                    }
-
-                }
+                DataWriter dataWriter = new DataWriter(serialDevice.OutputStream);
+                dataWriter.WriteString("your message here");
+                await dataWriter.StoreAsync();
+                dataWriter.DetachStream();
+                dataWriter = null;
             }
+            else
+            {
+                MessageDialog popup = new MessageDialog("Sorry, no device found.");
+                await popup.ShowAsync();
+            }
+        }
 
-
+        private void newbut_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectToSerialPort();
         }
     }
 }

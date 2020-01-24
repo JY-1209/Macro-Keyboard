@@ -27,42 +27,42 @@ namespace Macro_Keyboard
             //outWriter = new DataWriter(outputStream);
         }
 
-        private async void loginContinueClick(object sender, RoutedEventArgs e)
-        {
+        //private async void loginContinueClick(object sender, RoutedEventArgs e)
+        //{
 
-            var filter = SerialDevice.GetDeviceSelector("COM10");
-            var devices = await DeviceInformation.FindAllAsync(filter);
-            if (devices.Any())
-            {
-                var deviceId = devices.First().Id;
-                this.device = await SerialDevice.FromIdAsync(deviceId);
+        //    var filter = SerialDevice.GetDeviceSelector("COM10");
+        //    var devices = await DeviceInformation.FindAllAsync(filter);
+        //    if (devices.Any())
+        //    {
+        //        var deviceId = devices.First().Id;
+        //        this.device = await SerialDevice.FromIdAsync(deviceId);
 
-                if (this.device != null)
-                {
-                    this.device.BaudRate = 9600;
-                    this.device.StopBits = SerialStopBitCount.One;
-                    this.device.DataBits = 8;
-                    this.device.Parity = SerialParity.None;
-                    this.device.Handshake = SerialHandshake.None;
+        //        if (this.device != null)
+        //        {
+        //            this.device.BaudRate = 9600;
+        //            this.device.StopBits = SerialStopBitCount.One;
+        //            this.device.DataBits = 8;
+        //            this.device.Parity = SerialParity.None;
+        //            this.device.Handshake = SerialHandshake.None;
 
-                    this.dataReader = new DataReader(this.device.InputStream);
+        //            this.dataReader = new DataReader(this.device.InputStream);
 
-                    Speak("Device found");
+        //            Speak("Device found");
 
-                    while (true)
-                    {
-                        var bytesRecieved = await this.dataReader.LoadAsync(128);
-                        if (bytesRecieved > 0)
-                        {
+        //            while (true)
+        //            {
+        //                var bytesRecieved = await this.dataReader.LoadAsync(128);
+        //                if (bytesRecieved > 0)
+        //                {
 
-                            ElementsRead.Text = this.dataReader.ReadString(bytesRecieved).Trim();
-                        }
-                    }
+        //                    ElementsRead.Text = this.dataReader.ReadString(bytesRecieved).Trim();
+        //                }
+        //            }
 
-                }
-            }
+        //        }
+        //    }
 
 
-        }
+        //}
     }
 }

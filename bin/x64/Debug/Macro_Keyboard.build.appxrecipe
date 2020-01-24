@@ -73,6 +73,9 @@
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Arduino.xbf">
+      <PackagePath>Arduino.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>

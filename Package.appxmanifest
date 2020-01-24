@@ -44,6 +44,12 @@
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Name="internetClient"/>
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="vidpid:2341 8036">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
   </Capabilities>
+
 </Package>
