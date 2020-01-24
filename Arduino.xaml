@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Button Name="ArduinoButton" Height="100" Width="200" Content="Button" Click="ArduinoButton_Click"/>
     </Grid>
 </Page>
