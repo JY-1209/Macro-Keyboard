@@ -9,6 +9,25 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Name="ArduinoButton" Height="100" Width="200" Content="Button" Click="ArduinoButton_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Button Name="ReadSerial" Height="100" Width="200" Content="Button" Click="ArduinoButton_Click" Margin="10" 
+                HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <Border Width="200" Height="100" Background="AliceBlue" Grid.Column="1" 
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <TextBlock Name="Connection" HorizontalAlignment="Center" Text="Connection Status" 
+                       />
+        </Border>
+
+        <ToggleButton Name="GetInfo" Height="100" Width="200" Content="Button" Click="Connect_Click" Margin="10" 
+                HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="2"/>
+
     </Grid>
 </Page>

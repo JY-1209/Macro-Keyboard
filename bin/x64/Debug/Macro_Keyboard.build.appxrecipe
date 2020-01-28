@@ -73,11 +73,23 @@
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Arduino.xbf">
+      <PackagePath>Arduino.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\ExampleMainPage.xbf">
+      <PackagePath>ExampleMainPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\BackgroundPage.xbf">
       <PackagePath>BackgroundPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Scenario1_ConnectDisconnect.xbf">
+      <PackagePath>Scenario1_ConnectDisconnect.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\Scenario2_LEDTemp.xbf">
+      <PackagePath>Scenario2_LEDTemp.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\justi\Documents\GitHub\Macro-Keyboard\bin\x64\Debug\SettingsStoragePage.xbf">
       <PackagePath>SettingsStoragePage.xbf</PackagePath>
